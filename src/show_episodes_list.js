@@ -16,7 +16,7 @@ _.each(episodesEls, function(episodeEl) {
   var episodeNrs = episodeId.split("x");
   var episodeNr = parseInt(episodeNrs[1]);
 
-  KickassTorrents.getDownloadLink(showName, seasonNr, episodeNr, function(link) {
+  TPB.getDownloadLink(showName, seasonNr, episodeNr, function(link) {
     if (!link) return;
 
     var listItemEl = document.createElement("li");

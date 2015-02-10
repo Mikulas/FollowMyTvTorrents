@@ -1,24 +1,24 @@
 {
-  "name":             "FollowMyKickassTorrents",
+  "name":             "FollowMyTvTorrents",
   "version":          "1.0.0",
-  "homepage_url":     "https://github.com/DouweM/FollowMyKickassTorrents",
+  "homepage_url":     "https://github.com/Mikulas/FollowMyTvTorrents",
 
   "manifest_version": 2,
 
-  "description": "Show KickassTorrents download links on Followmy.tv.",
+  "description": "Show Pirate Bay torrents download links on Followmy.tv.",
 
   "content_scripts": [
     {
         "matches":  ["http://followmy.tv/dashboard", "http://followmy.tv/episode_list", "http://followmy.tv/show_list"],
-        "js":       ["vendor/underscore.js", "src/kickass.js", "src/unwatched_list.js"]
+        "js":       ["vendor/underscore.js", "src/tpb.js", "src/unwatched_list.js"]
     }, 
     {
         "matches":  ["http://followmy.tv/episodes/*"],
-        "js":       ["vendor/underscore.js", "src/kickass.js", "src/episode_page.js"]
+        "js":       ["vendor/underscore.js", "src/tpb.js", "src/episode_page.js"]
     },
     {
         "matches":  ["http://followmy.tv/shows/*/episodes*"],
-        "js":       ["vendor/underscore.js", "src/kickass.js", "src/show_episodes_list.js"],
+        "js":       ["vendor/underscore.js", "src/tpb.js", "src/show_episodes_list.js"],
         "css":      ["style.css"]
     }
   ]

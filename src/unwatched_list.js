@@ -7,7 +7,7 @@ var updateEpisodeEls = function() {
     var episodeId = pastEpisodeEl.querySelector(".episode-nr-wrapper .episode-nr").innerText;
     var episodeNrs = episodeId.split("x");
 
-    KickassTorrents.getDownloadLink(showName, parseInt(episodeNrs[0]), parseInt(episodeNrs[1]), function(link) {
+    TPB.getDownloadLink(showName, parseInt(episodeNrs[0]), parseInt(episodeNrs[1]), function(link) {
       if (!link) return;
 
       var actionsList = pastEpisodeEl.querySelector("ul.actions");

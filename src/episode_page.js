@@ -2,7 +2,7 @@ var titleEl = document.querySelector("h2");
 var showName = titleEl.querySelector("a").innerText;
 var episodeNrMatches = titleEl.querySelector("span.episode").innerText.match(/([0-9]+)x([0-9]+)/);
 
-KickassTorrents.getDownloadLink(showName, parseInt(episodeNrMatches[1]), parseInt(episodeNrMatches[2]), function(link) {
+TPB.getDownloadLink(showName, parseInt(episodeNrMatches[1]), parseInt(episodeNrMatches[2]), function(link) {
   if (!link) return;
   
   var infoListEl = document.querySelector("ul.info-list");
